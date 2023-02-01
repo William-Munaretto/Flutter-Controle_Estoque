@@ -1,5 +1,5 @@
-import 'package:controle_estoque/cadastro_estoque.dart';
-import 'package:controle_estoque/estoque.dart';
+import 'package:controle_estoque/pages/cadastro_estoque.dart';
+import 'package:controle_estoque/pages/estoque.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
