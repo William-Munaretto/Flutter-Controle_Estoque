@@ -1,3 +1,5 @@
+import 'package:controle_estoque/cadastro_estoque.dart';
+import 'package:controle_estoque/estoque.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,35 +15,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: const Color(0xffFE7C3F), actions: [
-        Stack(children: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications,
-              color: Color(0xff0C322C),
-            ),
-          ),
-          Positioned(
-            top: 5,
-            right: 5,
-            child: CircleAvatar(
-              maxRadius: 10,
-              backgroundColor: Colors.red.shade800,
-              child: Text(
-                '$count',
-                style: const TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          )
-        ]),
-      ]),
+      appBar: AppBar(
+        backgroundColor: const Color(0xff0C322C),
+        title: const Text('Beer Stock'),
+      ),
       body: Container(
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/lupulo.png')),
+          image: DecorationImage(
+            image: AssetImage("assets/images/lupulo.jpg"),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Center(
           child: Column(
@@ -53,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 20),
                     textStyle: const TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xff0C322C),
                     )),
@@ -61,15 +44,15 @@ class _HomePageState extends State<HomePage> {
                 child: const Text('Cadastro'),
               ),
               const SizedBox(
-                width: 30,
+                height: 20,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xffFE7C3F),
+                    primary: const Color(0xffFE7C3F),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 20),
                     textStyle: const TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xff0C322C),
                     )),
@@ -83,7 +66,13 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _cadastroCerveja() {}
+  _cadastroCerveja() {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (BuildContext context) => const Cadastro()));
+  }
 
-  _listarCervejas() {}
+  _listarCervejas() {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (BuildContext context) => const Estoque()));
+  }
 }
