@@ -64,6 +64,15 @@ class _HomePageState extends State<HomePage> {
                 width: 30,
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Color(0xffFE7C3F),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 20),
+                    textStyle: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff0C322C),
+                    )),
                 onPressed: () => _listarCervejas(),
                 child: const Text('Lista de Cervejas'),
               )
