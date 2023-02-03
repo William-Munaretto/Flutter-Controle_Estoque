@@ -1,5 +1,7 @@
-import 'package:controle_estoque/cadastro_estoque.dart';
-import 'package:controle_estoque/estoque.dart';
+import 'package:controle_estoque/pages/cadastro_estoque.dart';
+import 'package:controle_estoque/pages/estoque.dart';
+import 'package:controle_estoque/models/cerveja.dart';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -67,8 +69,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   _cadastroCerveja() {
+    Cerveja cerveja;
     Navigator.push(context,
-        MaterialPageRoute(builder: (BuildContext context) => const Cadastro()));
+        MaterialPageRoute(builder: (BuildContext context) => Cadastro()));
   }
 
   _listarCervejas() {

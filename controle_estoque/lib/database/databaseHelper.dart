@@ -26,7 +26,7 @@ class DatabaseHelper {
       nome VARCHAR(255), 
       tipo VARCHAR(255),
       ibu INTEGER,
-      descricacao VARCHAR(255)
+      descricao VARCHAR(255)
     )''';
 
   Future<List<Cerveja>> listarCervejas() async {
@@ -54,7 +54,7 @@ class DatabaseHelper {
   }
 
   //editar documento
-  Future<void> updateDocumento(Cerveja cerveja) async {
+  Future<void> updateCerveja(Cerveja cerveja) async {
     Database db = await instance.database;
     await db.update('cervejas', cerveja.toMap(),
         where: 'id = ?', whereArgs: [cerveja.id]);

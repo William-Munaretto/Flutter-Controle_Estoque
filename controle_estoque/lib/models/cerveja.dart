@@ -1,16 +1,16 @@
 class Cerveja {
   int? id;
-  String? nome;
-  String? tipo;
-  int? ibu;
-  String? descricao;
+  String nome;
+  String tipo;
+  int ibu;
+  String descricao;
 
   Cerveja({
     this.id,
-    this.nome,
-    this.tipo,
-    this.ibu,
-    this.descricao,
+    required this.nome,
+    required this.tipo,
+    required this.ibu,
+    required this.descricao,
   });
 
   factory Cerveja.fromMap(Map<String, dynamic> json) => Cerveja(

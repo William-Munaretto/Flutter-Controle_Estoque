@@ -1,5 +1,5 @@
 import 'package:controle_estoque/database/databaseHelper.dart';
-import 'package:controle_estoque/home_page.dart';
+import 'package:controle_estoque/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
