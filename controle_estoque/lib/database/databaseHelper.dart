@@ -33,7 +33,6 @@ class DatabaseHelper {
     Database db = await instance.database;
     var cervejas = await db.query(
       'cervejas',
-      orderBy: 'nome',
     );
     List<Cerveja> listaDeCervejas = cervejas.isNotEmpty
         ? cervejas.map((cerv) => Cerveja.fromMap(cerv)).toList()
